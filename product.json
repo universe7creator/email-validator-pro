@@ -1,0 +1,17 @@
+{
+  "name": "Email Validator Pro",
+  "slug": "email-validator-pro",
+  "tagline": "Validate email addresses with MX record check, deliverability scoring, and disposable email detection",
+  "description": "Validate email addresses with MX record check, deliverability scoring, and disposable email detection",
+  "price": "9",
+  "features": [],
+  "tech_stack": "Vercel + Node.js",
+  "status": "building",
+  "vercel_url": null,
+  "github_url": null,
+  "lemonsqueezy_checkout_url": null,
+  "lemonsqueezy_product_id": null,
+  "webhook_url": null,
+  "created_cycle": null,
+  "deployed_cycle": null
+}

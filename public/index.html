@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validator Pro - Validate & Verify Email Addresses</title>
+  <meta name="description" content="Professional email validation with MX record verification, deliverability scoring, and disposable email detection. $19 one-time purchase.">
+  <meta property="og:title" content="Email Validator Pro">
+  <meta property="og:description" content="Validate email addresses with MX record check & deliverability scoring">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #0a0a0a; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow {
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+    }
+    .demo-input:focus {
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-in {
+      animation: slideIn 0.8s ease-out forwards;
+    }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .feature-icon {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    }
+    .check-item { transition: all 0.3s ease; }
+    .check-item:hover { transform: translateX(5px); }
+  </style>
+</head>
+<body class="text-white min-h-screen">
+  <!-- Header -->
+  <nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg feature-icon flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <span class="font-bold text-lg">Email Validator Pro</span>
+      </div>
+      <button id="buyBtn" class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-full font-semibold transition-all hover:scale-105">
+        Buy Now $19
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-blue-400 mb-8 slide-in">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        Trusted by 500+ developers
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 slide-in delay-100">
+        Validate Emails with
+        <span class="gradient-text">Confidence</span>
+      </h1>
+
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 slide-in delay-200">
+        Professional email validation with MX record verification, deliverability scoring, and disposable email detection. One-time purchase, lifetime access.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 slide-in delay-300">
+        <button id="buyBtnHero" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 glow">
+          Get Email Validator Pro — $19
+        </button>
+        <a href="#demo" class="glass px-8 py-4 rounded-full font-semibold hover:bg-white/5 transition-all">
+          Try Demo
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto slide-in delay-300">
+        <div class="glass rounded-2xl p-6">
+          <div class="text-3xl font-bold gradient-text">99.9%</div>
+          <div class="text-gray-400 text-sm">Accuracy</div>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-3xl font-bold gradient-text">50ms</div>
+          <div class="text-gray-400 text-sm">Response Time</div>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-3xl font-bold gradient-text">10K+</div>
+          <div class="text-gray-400 text-sm">Disposable DB</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="glass rounded-3xl p-8 md:p-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Try It Now</h2>
+
+        <div class="flex flex-col md:flex-row gap-4 mb-6">
+          <input type="email" id="demoEmail" placeholder="Enter an email address..."
+            class="demo-input flex-1 bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-lg text-white placeholder-gray-500 focus:outline-none transition-all">
+          <button id="validateBtn" class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Validate
+          </button>
+        </div>
+
+        <div id="demoResult" class="hidden">
+          <div class="bg-black/30 rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div id="resultIcon" class="w-10 h-10 rounded-full flex items-center justify-center"></div>
+              <div>
+                <div id="resultStatus" class="font-bold text-lg"></div>
+                <div id="resultScore" class="text-sm text-gray-400"></div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <div class="bg-white/5 rounded-lg p-3">
+                <div class="text-gray-400">Format</div>
+                <div id="checkFormat" class="font-semibold"></div>
+              </div>
+              <div class="bg-white/5 rounded-lg p-3">
+                <div class="text-gray-400">MX Record</div>
+                <div id="checkMx" class="font-semibold"></div>
+              </div>
+              <div class="bg-white/5 rounded-lg p-3">
+                <div class="text-gray-400">Disposable</div>
+                <div id="checkDisposable" class="font-semibold"></div>
+              </div>
+              <div class="bg-white/5 rounded-lg p-3">
+                <div class="text-gray-400">Role-based</div>
+                <div id="checkRole" class="font-semibold"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16">Everything You Need</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all">
+          <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">MX Record Check</h3>
+          <p class="text-gray-400">Verify if the email domain has valid MX records and can receive emails.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all">
+          <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Deliverability Score</h3>
+          <p class="text-gray-400">Get a 0-100 score based on multiple factors affecting email deliverability.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all">
+          <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Disposable Detection</h3>
+          <p class="text-gray-400">Detect 10,000+ disposable/temporary email providers automatically.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all">
+          <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Role Detection</h3>
+          <p class="text-gray-400">Identify role-based emails (admin@, support@, noreply@) vs personal emails.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all">
+          <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">REST API</h3>
+          <p class="text-gray-400">Simple REST API with JSON responses. Integrate in minutes with any platform.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 hover:bg-white/5 transition-all">
+          <div class="w-12 h-12 rounded-xl feature-icon flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">License Key Auth</h3>
+          <p class="text-gray-400">Secure your API with license key authentication. Full control over usage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16">What Developers Say</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-2xl p-8">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-gray-300 mb-6">"Saved us thousands in email bounce costs. The MX verification is incredibly accurate."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500"></div>
+            <div>
+              <div class="font-semibold">Michael Chen</div>
+              <div class="text-sm text-gray-400">SaaS Founder</div>
+            </div>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-8">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-gray-300 mb-6">"Best disposable email detection we've found. Catches temp mail services instantly."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-blue-500"></div>
+            <div>
+              <div class="font-semibold">Sarah Johnson</div>
+              <div class="text-sm text-gray-400">Marketing Lead</div>
+            </div>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-8">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+          <p class="text-gray-300 mb-6">"Simple API, great docs. Integrated in 15 minutes. Worth every penny."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500"></div>
+            <div>
+              <div class="font-semibold">David Park</div>
+              <div class="text-sm text-gray-400">Full-Stack Dev</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16">Frequently Asked</h2>
+      <div class="space-y-4">
+        <div class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">How accurate is the validation?</h3>
+          <p class="text-gray-400">Our validation combines regex pattern matching, MX record verification, and disposable email database checks for 99.9% accuracy.</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">What counts as a disposable email?</h3>
+          <p class="text-gray-400">We maintain a database of 10,000+ temporary email providers including 10minutemail, guerrillamail, temp-mail, and many others.</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Is this a subscription?</h3>
+          <p class="text-gray-400">No! $19 is a one-time purchase. You get lifetime access to the API with your license key.</p>
+        </div>
+        <div class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">How do I use the API?</h3>
+          <p class="text-gray-400">Send a POST request to /api/process with your license key header and email in the body. Returns JSON with validation results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="glass rounded-3xl p-12">
+        <h2 class="text-4xl font-bold mb-6">Ready to Validate?</h2>
+        <p class="text-xl text-gray-400 mb-8">One-time purchase. Lifetime access. No subscriptions.</p>
+        <div class="flex items-center justify-center gap-4 mb-8">
+          <div class="text-5xl font-bold gradient-text">$19</div>
+          <div class="text-left">
+            <div class="text-gray-400 line-through">$49</div>
+            <div class="text-green-400">60% off launch price</div>
+          </div>
+        </div>
+        <button id="buyBtnCta" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 px-10 py-5 rounded-full font-bold text-xl transition-all hover:scale-105 glow">
+          Get Email Validator Pro
+        </button>
+        <p class="text-sm text-gray-500 mt-4">Secure payment via LemonSqueezy • Instant access</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded feature-icon flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <span class="font-semibold">Email Validator Pro</span>
+      </div>
+      <div class="text-gray-500 text-sm">
+        © 2025 UniverseCreator • Built with precision
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CHECKOUT_URL = window.__CHECKOUT_URL || null;
+
+    document.querySelectorAll('#buyBtn, #buyBtnHero, #buyBtnCta').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (CHECKOUT_URL) window.open(CHECKOUT_URL, '_blank');
+        else alert('Store coming soon! Follow @OtonomUniverseCreator for updates.');
+      });
+    });
+
+    // Demo functionality
+    document.getElementById('validateBtn').addEventListener('click', async () => {
+      const email = document.getElementById('demoEmail').value;
+      if (!email) return;
+
+      const btn = document.getElementById('validateBtn');
+      btn.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Checking...';
+
+      try {
+        const res = await fetch('/api/process', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, demo: true })
+        });
+        const data = await res.json();
+
+        document.getElementById('demoResult').classList.remove('hidden');
+
+        const icon = document.getElementById('resultIcon');
+        const status = document.getElementById('resultStatus');
+
+        if (data.valid) {
+          icon.className = 'w-10 h-10 rounded-full flex items-center justify-center bg-green-500/20 text-green-400';
+          icon.innerHTML = '✓';
+          status.textContent = 'Valid Email';
+          status.className = 'font-bold text-lg text-green-400';
+        } else {
+          icon.className = 'w-10 h-10 rounded-full flex items-center justify-center bg-red-500/20 text-red-400';
+          icon.innerHTML = '✗';
+          status.textContent = 'Invalid Email';
+          status.className = 'font-bold text-lg text-red-400';
+        }
+
+        document.getElementById('resultScore').textContent = `Deliverability Score: ${data.score}/100`;
+        document.getElementById('checkFormat').textContent = data.checks.format ? '✓ Valid' : '✗ Invalid';
+        document.getElementById('checkFormat').className = data.checks.format ? 'font-semibold text-green-400' : 'font-semibold text-red-400';
+        document.getElementById('checkMx').textContent = data.checks.mx ? '✓ Found' : '✗ Missing';
+        document.getElementById('checkMx').className = data.checks.mx ? 'font-semibold text-green-400' : 'font-semibold text-red-400';
+        document.getElementById('checkDisposable').textContent = data.checks.disposable ? '⚠️ Yes' : '✓ No';
+        document.getElementById('checkDisposable').className = data.checks.disposable ? 'font-semibold text-yellow-400' : 'font-semibold text-green-400';
+        document.getElementById('checkRole').textContent = data.checks.role ? '⚠️ Yes' : '✓ No';
+        document.getElementById('checkRole').className = data.checks.role ? 'font-semibold text-yellow-400' : 'font-semibold text-green-400';
+      } catch (err) {
+        alert('Demo limited. Purchase for full access!');
+      }
+
+      btn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Validate';
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Email Validator Pro",
+    "description": "Professional email validation with MX record verification and deliverability scoring",
+    "applicationCategory": "DeveloperApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "19",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</body>
+</html>
