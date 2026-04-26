@@ -4,7 +4,13 @@
   "tagline": "Validate email addresses with MX record check, deliverability scoring, and disposable email detection",
   "description": "Validate email addresses with MX record check, deliverability scoring, and disposable email detection",
   "price": "9",
-  "features": [],
+  "features": [
+    "Real-time validation",
+    "Professional-grade features",
+    "AI-powered analysis",
+    "No signup required",
+    "Browser-based, no install"
+  ],
   "tech_stack": "Vercel + Node.js",
   "status": "live",
   "vercel_url": "https://email-validator-pro-smoky.vercel.app",
@@ -23,5 +29,9 @@
   "polar_product_price_id": "08e2d671-417f-418c-9b6c-febeee49dbcb",
   "polar_checkout_link_id": "2a8dc8f5-ac23-48a7-bb08-5d1f893540b2",
   "canonical_url": "https://email-validator-pro.vercel.app",
-  "canonical_url_override": "https://email-validator-pro-smoky.vercel.app"
+  "canonical_url_override": "https://email-validator-pro-smoky.vercel.app",
+  "category": "developer-tools",
+  "tags": [
+    "validator"
+  ]
 }
